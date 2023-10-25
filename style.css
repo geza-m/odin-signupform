@@ -1,0 +1,122 @@
+@import '_base.css';
+
+* {
+  /* outline: red solid 1px; */
+}
+
+body {
+  height: 100vh;
+}
+
+
+:root {
+  font-size: 16px;
+/*   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400; */
+
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+
+#container {
+  width:80vw;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  background-color: #242424;
+  margin-inline: auto;
+}
+
+.section {
+  margin-inline:0;
+  margin-block: 20px;
+  padding-inline: 20px;
+}
+
+.form-section {
+  background-color: rgb(194, 210, 233);
+  box-shadow: 0 2px 10px 0px grey;
+  padding: 0;
+
+}
+fieldset {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px;
+
+ 
+}
+
+
+input {
+  width: 100%;
+}
+input:invalid {
+border-color: rgb(212, 79, 79);
+}
+
+input:valid {
+  border-color: green;
+}
+
+#right-panel {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#left-panel {
+  min-width: 40%;
+  background-image: url('/img/greg-johnson-jWkKaw4Igic-unsplash.jpg');
+  background-size: cover; /*cover */
+  background-position: center; /* or any other values */
+}
+
+#logo-background {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  height: 100px;
+  position: relative;
+  top: 20vh;
+}
+
+
+p {
+  flex-wrap: wrap;
+}
+
+legend {
+font-weight: bold;
+float: left;
+margin-bottom: .5em;
+width: 100%;
+}
+
+
+
+@media (max-width: 27.5rem) {
+  :root {
+      /*--gap: 30px;*/
+  }
+  html {
+      /*font-size: 70%; as long as the smallest font is still legible */
+  }
+
+  #container {
+    flex-direction: column;
+    width: 100vw;
+  }
+  #left-panel {
+    min-height: 20vh;
+    flex-grow: 1;
+  }
+}
